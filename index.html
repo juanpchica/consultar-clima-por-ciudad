@@ -2,18 +2,89 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Estado del clima de tu ciudad</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
+	<title>Estado del clima de tu ciudad</title>
 	<link rel="stylesheet" href="style.css">
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="script.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+	
+	
 </head>
 <body>
 	
 	<main>
-		
-	</main>
+		<header><h1>Consulta el estado del clima de tu ciudad</h1></header>
+		<section>
 
+			<div class="search">
+				<input type="text" data-input='cityAdd' id="js-name-city" placeholder="Ingresa el nombre de tu ciudad..." class="search__text">
+				<div class="search--grid">
+					<button class="search__btn"  id="js-search">Agregar Ciudad</button>
+					<button class="search__btn"  id="js-load">Mostrar Ciudades</button>
+					<button class="search__btn"  id="js-delete">Eliminar Ciudades</button>
+				</div>
+			</div>
+
+			<div class="weather">
+				<div class="loader">Geolocalizando tu posicion por favor espera...</div>
+				<template id="js-template">
+					
+					<div class="weather__item">
+						
+						<div class="weather__item__col">
+							<div data-zone  class="weather__zone"></div>
+							<div data-hour  class="weather__hour">Domingo 8:51 PM</div>
+							<div data-main  class="weather__main"></div>
+						</div>
+
+						<div class="weather__item__col">
+						
+							<div class="weather__tem--row">
+								<img src=""  data-picture >
+								<h4 class="weather__tem__val" data-tem></h4>
+							</div>
+							<div class="weather__tem--row  cols-temp">
+								
+								<div class="weather__tem--min  font-pretty">
+									Temp Min
+									<h4 class="weather__tem__val" data-tem-min></h4>
+								</div>
+
+								<div class="weather__tem--max font-pretty">
+									Temp Max
+									<h4 class="weather__tem__val" data-tem-max></h4>
+								</div>
+
+							</div>
+						
+						</div>
+						
+						<div class="weather__item__col">
+							
+							<div class="weather__humidity  font-pretty" >
+								Humedad
+								<h4 class="weather__tem__val" data-humidity></h4>
+							</div>
+
+							<div class="weather__pressure  font-pretty" >
+								Presión
+								<h4 class="weather__tem__val" data-pressure></h4>
+							</div>	
+
+						</div>
+
+					</div>
+				</template>
+
+
+			</div>
+
+		</section>
+		<footer>
+			<h3>Powered by Juan Pablo Chica</h3>
+		</footer>
+	</main>
+	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

@@ -17,9 +17,7 @@
 
 	var API_WORLDTIME_KEY = "d6a4075ceb419113c64885d9086d5";
     var API_WORLDTIME = "https://api.worldweatheronline.com/free/v2/tz.ashx?format=json&key=" + API_WORLDTIME_KEY + "&q=";
-    console.log(cities);
     var cities = [];
-    console.log(cities);
 	var cityWeather = {};
 	cityWeather.zone;
 	cityWeather.icon;
